@@ -6,11 +6,11 @@ const app = express()
 
 
 app.use(express.json())
-//app.use(express.static(__dirname + '/../public'))
+app.use(express.static(__dirname + '/../public'))
 
-app.get('/', (req, res) => {
-    res.send('Hello World')
-  })
+//app.get('/', (req, res) => {
+//    res.send('Hello World')
+//  })
 
 app.get('/users', async (req, res) => {
   const db = await connect()
